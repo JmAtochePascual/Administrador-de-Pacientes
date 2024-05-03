@@ -116,6 +116,13 @@ class UI {
       document.querySelector('#citas').appendChild(divPaciente);
     });
   }
+
+  // limpia el html previo
+  limpiarHTML() {
+    while (document.querySelector('#citas').firstChild) {
+      document.querySelector('#citas').removeChild(document.querySelector('#citas').firstChild);
+    }
+  }
 }
 
 
