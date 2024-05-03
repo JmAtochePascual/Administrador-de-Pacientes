@@ -9,7 +9,12 @@ const formularioElement = document.querySelector('#nueva-cita');
 const init = (event) => {
   event.preventDefault();
 
-  console.log(ui.validarFormulario())
+  if (!ui.validarFormulario()) {
+    ui.mostrarAlerta('Todos los campos son obligatorios', false);
+    return;
+  };
+
+  ui.mostrarAlerta('Cita registrada correctamente');
 }
 
 
