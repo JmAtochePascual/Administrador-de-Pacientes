@@ -9,12 +9,20 @@ const formularioElement = document.querySelector('#nueva-cita');
 const init = (event) => {
   event.preventDefault();
 
+  // Validar formulario
   if (!ui.validarFormulario()) {
     ui.mostrarAlerta('Todos los campos son obligatorios', false);
     return;
   };
 
+  // Mostrar mensaje de exito
   ui.mostrarAlerta('Cita registrada correctamente');
+
+  // Crear un nuevo paciente
+  const objePaciente = ui.obtenerDatos();
+
+  // Reiniciar el formulario
+  formularioElement.reset();
 }
 
 

@@ -36,6 +36,19 @@ class UI {
       }, 3000);
     };
   };
+
+  // Obtener los valores del formulario
+  obtenerDatos() {
+    const nombreMascota = document.querySelector('#mascota').value;
+    const propietario = document.querySelector('#propietario').value;
+    const telefono = document.querySelector('#telefono').value;
+    const fecha = document.querySelector('#fecha').value;
+    const hora = document.querySelector('#hora').value;
+    const sintomas = document.querySelector('#sintomas').value;
+    const id = Date.now();
+
+    return { nombreMascota, propietario, telefono, fecha, hora, sintomas, id };
+  };
 }
 
 
