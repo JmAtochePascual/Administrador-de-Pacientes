@@ -4,7 +4,7 @@ import { paciente } from "./class/Paciente..js";
 
 // Variables
 const formularioElement = document.querySelector('#nueva-cita');
-
+export let id;
 
 // Funcion de inicializacion
 const init = (event) => {

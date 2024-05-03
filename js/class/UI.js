@@ -1,4 +1,5 @@
 import { paciente } from './Paciente..js';
+import { editar } from '../app.js';
 
 class UI {
 
@@ -98,13 +99,13 @@ class UI {
       const btnEliminar = document.createElement('button');
       btnEliminar.classList.add('btn', 'btn-danger', 'mr-2');
       btnEliminar.innerHTML = 'Eliminar';
-      btnEliminar.onclick = () => { paciente.eliminarPaciente(id) };
+      btnEliminar.onclick = () => paciente.eliminarPaciente(id);
 
       // Boton para editar paciente
       const btnEditar = document.createElement('button');
       btnEditar.classList.add('btn', 'btn-info');
       btnEditar.innerHTML = 'Editar';
-      // btnEditar.onclick = () => cargarEdicion(paciente);
+      btnEditar.onclick = () => this.cargarEdicion(pacienteElemen);
 
       // Agregar los parrafos al divPaciente
       divPaciente.append(
@@ -127,6 +128,24 @@ class UI {
     while (document.querySelector('#citas').firstChild) {
       document.querySelector('#citas').firstChild.remove();
     }
+  }
+
+  // Carga los datos y el modo edicion
+  cargarEdicion(paciente) {
+    const { nombreMascota, propietario, telefono, fecha, hora, sintomas, id } = paciente;
+
+    // Llenar los inputs
+    document.querySelector('#mascota').value = nombreMascota;
+    document.querySelector('#propietario').value = propietario;
+    document.querySelector('#telefono').value = telefono;
+    document.querySelector('#fecha').value = fecha;
+    document.querySelector('#hora').value = hora;
+    document.querySelector('#sintomas').value = sintomas;
+
+    // Cambiar el texto del boton
+    document.querySelector('button[type="submit"]').textContent = 'Guardar cambios';
+
+    id = id;
   }
 }
 
