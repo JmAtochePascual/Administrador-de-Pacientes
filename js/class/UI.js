@@ -1,3 +1,5 @@
+import { paciente } from './Paciente..js';
+
 class UI {
 
   // Metodo para validar el formulario
@@ -53,8 +55,11 @@ class UI {
   // Metodo para mostrar pacientes
   mostrarPacientes(pacientes) {
 
-    pacientes.forEach(paciente => {
-      const { nombreMascota, propietario, telefono, fecha, hora, sintomas, id } = paciente;
+    // Limpiar el html
+    this.limpiarHTML();
+
+    pacientes.forEach(pacienteElemen => {
+      const { nombreMascota, propietario, telefono, fecha, hora, sintomas, id } = pacienteElemen;
 
       const divPaciente = document.createElement('div');
       divPaciente.classList.add('cita', 'p-3');
@@ -93,7 +98,7 @@ class UI {
       const btnEliminar = document.createElement('button');
       btnEliminar.classList.add('btn', 'btn-danger', 'mr-2');
       btnEliminar.innerHTML = 'Eliminar';
-      // btnEliminar.onclick = () => eliminarPaciente(id);
+      btnEliminar.onclick = () => { paciente.eliminarPaciente(id) };
 
       // Boton para editar paciente
       const btnEditar = document.createElement('button');
@@ -120,7 +125,7 @@ class UI {
   // limpia el html previo
   limpiarHTML() {
     while (document.querySelector('#citas').firstChild) {
-      document.querySelector('#citas').removeChild(document.querySelector('#citas').firstChild);
+      document.querySelector('#citas').firstChild.remove();
     }
   }
 }
