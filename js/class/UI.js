@@ -1,7 +1,11 @@
 import { paciente } from './Paciente..js';
-import { editar } from '../app.js';
 
 class UI {
+
+  constructor() {
+    this.id = '';
+    this.editar = false
+  }
 
   // Metodo para validar el formulario
   validarFormulario() {
@@ -145,7 +149,8 @@ class UI {
     // Cambiar el texto del boton
     document.querySelector('button[type="submit"]').textContent = 'Guardar cambios';
 
-    id = id;
+    this.editar = true;
+    this.id = id;
   }
 }
 

@@ -4,7 +4,6 @@ import { paciente } from "./class/Paciente..js";
 
 // Variables
 const formularioElement = document.querySelector('#nueva-cita');
-export let id;
 
 // Funcion de inicializacion
 const init = (event) => {
@@ -19,11 +18,22 @@ const init = (event) => {
   // Crear un nuevo paciente
   const objePaciente = ui.obtenerDatos();
 
-  // Agregar nuevo paciente
-  paciente.agregarPaciente(objePaciente);
+  if (ui.editar) {
+    paciente.editarPaciente(ui.id);
+    document.querySelector('button[type="submit"]').textContent = 'Crear cita';
 
-  // Mostrar mensaje de exito
-  ui.mostrarAlerta('Cita registrada correctamente');
+    // Mostrar mensaje de exito
+    ui.mostrarAlerta('Cita actualizada correctamente');
+
+    ui.editar = false;
+    ui.id = '';
+  } else {
+    // Agregar nuevo paciente
+    paciente.agregarPaciente(objePaciente);
+
+    // Mostrar mensaje de exito
+    ui.mostrarAlerta('Cita registrada correctamente');
+  }
 
   // Reiniciar el formulario
   formularioElement.reset();
