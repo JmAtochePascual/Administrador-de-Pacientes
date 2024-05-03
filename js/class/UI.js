@@ -49,6 +49,73 @@ class UI {
 
     return { nombreMascota, propietario, telefono, fecha, hora, sintomas, id };
   };
+
+  // Metodo para mostrar pacientes
+  mostrarPacientes(pacientes) {
+
+    pacientes.forEach(paciente => {
+      const { nombreMascota, propietario, telefono, fecha, hora, sintomas, id } = paciente;
+
+      const divPaciente = document.createElement('div');
+      divPaciente.classList.add('cita', 'p-3');
+      divPaciente.dataset.id = id;
+
+      const nombreMascotaParrafo = document.createElement('h2');
+      nombreMascotaParrafo.classList.add('card-title', 'font-weight-bolder');
+      nombreMascotaParrafo.textContent = nombreMascota;
+
+      const propietarioParrafo = document.createElement('p');
+      propietarioParrafo.innerHTML = `
+        <span class="font-weight-bolder">Propietario: </span> ${propietario}
+      `;
+
+      const telefonoParrafo = document.createElement('p');
+      telefonoParrafo.innerHTML = `
+        <span class="font-weight-bolder">Telefono: </span> ${telefono}
+      `;
+
+      const fechaParrafo = document.createElement('p');
+      fechaParrafo.innerHTML = `
+        <span class="font-weight-bolder">Fecha: </span> ${fecha}
+      `;
+
+      const horaParrafo = document.createElement('p');
+      horaParrafo.innerHTML = `
+        <span class="font-weight-bolder">Hora: </span> ${hora}
+      `;
+
+      const sintomasParrafo = document.createElement('p');
+      sintomasParrafo.innerHTML = `
+        <span class="font-weight-bolder">Sintomas: </span> ${sintomas}
+      `;
+
+      // Boton para eliminar paciente
+      const btnEliminar = document.createElement('button');
+      btnEliminar.classList.add('btn', 'btn-danger', 'mr-2');
+      btnEliminar.innerHTML = 'Eliminar';
+      // btnEliminar.onclick = () => eliminarPaciente(id);
+
+      // Boton para editar paciente
+      const btnEditar = document.createElement('button');
+      btnEditar.classList.add('btn', 'btn-info');
+      btnEditar.innerHTML = 'Editar';
+      // btnEditar.onclick = () => cargarEdicion(paciente);
+
+      // Agregar los parrafos al divPaciente
+      divPaciente.append(
+        nombreMascotaParrafo,
+        propietarioParrafo,
+        telefonoParrafo,
+        fechaParrafo,
+        horaParrafo,
+        sintomasParrafo,
+        btnEliminar,
+        btnEditar);
+
+      // Agregar el divPaciente al contenedor
+      document.querySelector('#citas').appendChild(divPaciente);
+    });
+  }
 }
 
 
