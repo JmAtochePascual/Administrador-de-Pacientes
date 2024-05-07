@@ -1,4 +1,5 @@
 import { ui } from './UI.js';
+import { db } from '../app.js';
 
 class Paciente {
   constructor() {
@@ -10,6 +11,14 @@ class Paciente {
     this.pacientes = [...this.pacientes, paciente];
 
     ui.mostrarPacientes(this.pacientes);
+
+    const transaction = db.db.transaction(['citas'], 'readwrite');
+
+    // Creamos el objeto de la transacción que nos permitirá agregar un registro
+    const objectStore = transaction.objectStore('citas');
+
+    // Agregamos el registro a la base de datos
+    objectStore.add(paciente);
   }
 
   // Elimina un paciente del arreglo de pacientes
