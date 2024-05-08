@@ -18,7 +18,7 @@ class UI {
     request.onupgradeneeded = () => {
       this.DB = request.result;
       // Creamos la tabla de citas
-      const objectStore = DB.createObjectStore('citas', {
+      const objectStore = this.DB.createObjectStore('citas', {
         keyPath: 'id',
         autoIncrement: true
       });
