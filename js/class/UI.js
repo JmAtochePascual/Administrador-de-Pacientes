@@ -151,7 +151,8 @@ class UI {
         const btnEditar = document.createElement('button');
         btnEditar.classList.add('btn', 'btn-info');
         btnEditar.innerHTML = 'Editar';
-        btnEditar.onclick = () => this.cargarEdicion(pacienteElemen);
+        const paciente = cursor.value;
+        btnEditar.onclick = () => this.cargarEdicion(paciente);
 
         // Agregar los parrafos al divPaciente
         divPaciente.append(

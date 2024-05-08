@@ -33,19 +33,23 @@ class Paciente {
   editarPaciente(id) {
     const { nombreMascota, propietario, telefono, fecha, hora, sintomas } = ui.obtenerDatos();
 
-    const pacientesActualizados = this.pacientes.map(paciente => {
-      if (paciente.id === id) {
-        paciente.nombreMascota = nombreMascota;
-        paciente.propietario = propietario;
-        paciente.telefono = telefono;
-        paciente.fecha = fecha;
-        paciente.hora = hora;
-        paciente.sintomas = sintomas;
-      }
-      return paciente;
-    });
+    const pacienteActualizado = {
+      nombreMascota,
+      propietario,
+      telefono,
+      fecha,
+      hora,
+      sintomas,
+      id
+    }
 
-    ui.mostrarPacientes(pacientesActualizados);
+    const transaction = ui.DB.transaction(['citas'], 'readwrite');
+
+    const objectStore = transaction.objectStore('citas');
+    // editamos el registro
+    objectStore.put(pacienteActualizado);
+
+    ui.mostrarPacientes();
   }
 }
 
