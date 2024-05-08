@@ -24,9 +24,11 @@ class Paciente {
 
   // Elimina un paciente del arreglo de pacientes
   eliminarPaciente(id) {
-    this.pacientes = this.pacientes.filter(paciente => paciente.id !== id);
 
-    ui.mostrarPacientes(this.pacientes);
+    const transacción = ui.DB.transaction(['citas'], 'readwrite');
+    const objectStore = transacción.objectStore('citas');
+    objectStore.delete(id);
+    ui.mostrarPacientes();
   }
 
   // Edita un paciente del arreglo de pacientes

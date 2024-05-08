@@ -151,8 +151,8 @@ class UI {
         const btnEditar = document.createElement('button');
         btnEditar.classList.add('btn', 'btn-info');
         btnEditar.innerHTML = 'Editar';
-        const paciente = cursor.value;
-        btnEditar.onclick = () => this.cargarEdicion(paciente);
+        const pacienteMemori = cursor.value;
+        btnEditar.onclick = () => this.cargarEdicion(pacienteMemori);
 
         // Agregar los parrafos al divPaciente
         divPaciente.append(
@@ -168,7 +168,6 @@ class UI {
         // Agregar el divPaciente al contenedor
         document.querySelector('#citas').appendChild(divPaciente);
         cursor.continue();
-
       }
     }
   };
