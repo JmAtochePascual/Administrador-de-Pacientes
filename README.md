@@ -60,6 +60,6 @@ Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
 ## 🌐 Ver Proyecto en la WEB
 
-Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepacual.github.io/Administrador-de-Pacientes/).
+Puedes ver el proyecto en funcionamiento [aquí](https://jmatochepascual.github.io/Administrador-de-Pacientes/).
 
 Todos los derechos reservados Administrador de Pacientes 2024 ©.
