@@ -13,9 +13,13 @@ body {
 
 .titulo {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: white;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .container {
