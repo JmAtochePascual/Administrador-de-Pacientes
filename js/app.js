@@ -35,8 +35,7 @@ const init = (event) => {
   };
 
   resetApp();
-  showDates();
-  console.log(isEditMode);
+  showDatesInHtml();
 };
 
 const createDataBase = () => {
@@ -48,7 +47,7 @@ const createDataBase = () => {
 
   crearDB.onsuccess = () => {
     DB = crearDB.result;
-    showDates();
+    showDatesInHtml();
   };
 
   crearDB.onupgradeneeded = function (event) {
@@ -66,7 +65,7 @@ const createDataBase = () => {
   };
 };
 
-const showDates = () => {
+const showDatesInHtml = () => {
   clearHtml();
 
   const objectStore = DB.transaction('citas').objectStore('citas');
@@ -165,7 +164,6 @@ const addDate = (patient) => {
 };
 
 const updateDate = (patient) => {
-
   const transaction = DB.transaction(['citas'], 'readwrite');
   const objectStore = transaction.objectStore('citas');
   objectStore.put(patient);
@@ -186,7 +184,7 @@ const deleteDate = (id) => {
 
   transaction.oncomplete = () => {
     showAlert('La cita se eliminó correctamente');
-    showDates();
+    showDatesInHtml();
   };
 
   transaction.onerror = () => {
@@ -225,9 +223,7 @@ const resetApp = () => {
   dateObj.hour = '';
   dateObj.symptom = '';
 
-  if (dateObj.id) {
-    delete dateObj.id;
-  }
+  if (dateObj.id) delete dateObj.id;
 
   formElement.reset();
   isEditMode = false;
@@ -235,7 +231,6 @@ const resetApp = () => {
 };
 
 const generarId = () => Math.random().toString(36).substring(2) + Date.now().toString(36);
-
 
 document.addEventListener("DOMContentLoaded", () => {
   createDataBase();

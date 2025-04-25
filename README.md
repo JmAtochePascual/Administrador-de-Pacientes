@@ -15,7 +15,24 @@ Este proyecto es un administrador de citas veterinarias que permite gestionar de
 
 ## Tecnologías
 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+- **HTML:** Se emplea para estructurar y organizar el contenido del sitio.
+- **CSS:** Se emplea para definir la apariencia visual y el diseño de la interfaz.
+- **JavaScript:** Se emplea para implementar la lógica y la interactividad del sitio, respondiendo a las acciones del usuario.
+
 ## Estructura del Proyecto
+
+- **css/**: Almacena todos los archivos relacionados con los estilos y la presentación visual del sitio.
+- **js/**: Almacena los archivos que contienen la lógica y funcionalidades interactivas del sitio.
+- **index.html**: Archivo principal que define la estructura base del sitio.
+
+## Instalación
+
+> No se requiere instalación adicional para utilizar este proyecto.
 
 ## Uso
 
@@ -41,7 +58,7 @@ cd Administrador-de-Pacientes
 
 Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
-1. Haz un fork del repositorio.
+1. Haz un fork del repositorio
 
 2. Crea una nueva rama para tu funcionalidad:
    ```bash
@@ -59,6 +76,6 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 ## Licencia
 
-Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
+Este proyecto se encuentra disponible bajo la licencia MIT. Puedes consultar los términos completos [aquí](https://opensource.org/licenses/MIT).
 
-Hecho con 💚 por Administrador de Pacientes | ©2025 - Transformando tu veterinaria en una experiencia única.
+Desarrollado con 💚 por JMCode | © 2025 - Transformando ideas en soluciones digitales
