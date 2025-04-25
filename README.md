@@ -1,4 +1,4 @@
-# ⚡️ Administrador de Pacientes
+# Administrador de Pacientes
 
 Este proyecto es un administrador de citas veterinarias que permite gestionar de manera eficiente las consultas de pacientes. Desarrollado con JavaScript moderno y programación orientada a objetos, ofrece una interfaz intuitiva para veterinarios y personal administrativo. El sistema permite registrar, editar y eliminar citas, incluyendo detalles como información del paciente, propietario, fecha/hora y síntomas. Utiliza Bootstrap para un diseño responsivo y moderno, validación de formularios en tiempo real, y almacenamiento local para persistir los datos. El código está estructurado en clases y módulos para mayor mantenibilidad y escalabilidad.
 
@@ -8,7 +8,6 @@ Este proyecto es un administrador de citas veterinarias que permite gestionar de
 - **Visualización de citas:** Muestra todas las citas registradas de forma clara y ordenada, facilitando la gestión y seguimiento.
 - **Edición y eliminación:** Permite editar y eliminar citas existentes para mantener la información actualizada.
 - **Validación de formularios:** Realiza validaciones en tiempo real para asegurar que todos los campos obligatorios estén completos antes de registrar una cita.
-- **Almacenamiento local:** Guarda las citas en el localStorage del navegador para mantener la persistencia de datos.
 - **Alertas interactivas:** Muestra alertas visuales para informar al usuario sobre acciones realizadas correctamente o posibles errores.
 - **Base de datos local:** Utiliza IndexedDB para almacenar las citas de forma persistente en el navegador.
 - **Interfaz moderna:** Diseño limpio y responsivo con Bootstrap 5 y estilos personalizados.
