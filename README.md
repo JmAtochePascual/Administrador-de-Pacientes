@@ -15,19 +15,6 @@ Este proyecto es un administrador de citas veterinarias que permite gestionar de
 
 ## Tecnologías
 
-- **HTML5:** Estructura semántica de la página.
-- **Bootstrap 5:** Framework CSS para un diseño moderno y responsivo.
-- **JavaScript ES6+:**
-  - Programación orientada a objetos
-  - Módulos ES6
-  - IndexedDB para persistencia de datos
-  - Clases y herencia
-  - Async/Await para operaciones asíncronas
-- **Características adicionales:**
-  - Sistema de validación de formularios
-  - Manejo de errores y alertas
-  - Diseño responsivo con media queries
-
 ## Estructura del Proyecto
 
 - **css/**:
