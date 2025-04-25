@@ -13,7 +13,7 @@ Este proyecto es un administrador de citas veterinarias que permite gestionar de
 - **Interfaz moderna:** Diseño limpio y responsivo con Bootstrap 5 y estilos personalizados.
 - **Gestión completa de citas:** CRUD completo (Crear, Leer, Actualizar y Eliminar) para las citas veterinarias.
 
-## Tecnologías y Herramientas
+## Tecnologías
 
 - **HTML5:** Estructura semántica de la página.
 - **Bootstrap 5:** Framework CSS para un diseño moderno y responsivo.
@@ -57,10 +57,6 @@ cd Administrador-de-Pacientes
 3. Abre el archivo `index.html` en tu navegador web preferido
 
 4. Opcionalmente, puedes usar un servidor local como Live Server para una mejor experiencia
-
-## Instalación
-
-No se requiere instalación adicional para utilizar este proyecto.
 
 ## Contribución
 
