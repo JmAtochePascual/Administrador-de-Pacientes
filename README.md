@@ -82,12 +82,4 @@ Si deseas contribuir al proyecto, por favor sigue estos pasos en orden:
 
 Este proyecto está bajo la licencia [MIT](https://opensource.org/licenses/MIT).
 
-## Imagen de Rereferencia
-
-![](https://i.postimg.cc/4ytk6wnj/Pacientes-JS.png)
-
-## ¡Visita Nuestro Proyecto!
-
-¿Quieres ver Administrador de Pacientes en acción? ¡Haz clic aquí! 👉 [Visitar Administrador de Pacientes](https://jmatochepascual.github.io/Administrador-de-Pacientes/)
-
 Hecho con 💚 por Administrador de Pacientes | ©2025 - Transformando tu veterinaria en una experiencia única.
