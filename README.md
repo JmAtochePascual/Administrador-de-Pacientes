@@ -17,14 +17,6 @@ Este proyecto es un administrador de citas veterinarias que permite gestionar de
 
 ## Estructura del Proyecto
 
-- **css/**:
-  - `styles.css`: Estilos personalizados y override de Bootstrap
-- **js/**:
-  - `app.js`: Punto de entrada de la aplicación
-  - `class/UI.js`: Clase para manejo de la interfaz de usuario
-  - `class/Paciente.js`: Clase para la lógica de negocio de pacientes
-- **index.html**: Página principal de la aplicación
-
 ## Uso
 
 Para visualizar el proyecto localmente, sigue estos pasos:
